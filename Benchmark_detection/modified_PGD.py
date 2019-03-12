@@ -146,7 +146,7 @@ class ProjectedGradientDescent(Attack):
 
     def body(i, adv_x):
       """Do a projected gradient step"""
-      alhpa = tf.random.uniform([1])
+      alpha = tf.random.uniform([1])
       adv_base = FGM1.generate(adv_x, **fgm1_params)
       adv_detect = FGM2.generate(adv_x, **fgm2_params)
       adv_x = alpha*adv_base + (1-alpha)*adv_detect
