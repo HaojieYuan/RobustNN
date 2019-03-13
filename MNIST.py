@@ -64,3 +64,4 @@ nearest_images = np.array(nearest_images)
 
 stop = time()
 print("Total run time:" + str(stop - start))
+
