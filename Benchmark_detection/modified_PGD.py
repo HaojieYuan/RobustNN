@@ -102,7 +102,7 @@ class ProjectedGradientDescent(Attack):
       preds_max = reduce_max(model_preds, 1, keepdims=True)
       detect_max = reduce_max(detector_preds, 1, keepdims=True)
       y = tf.to_float(tf.equal(model_preds, preds_max))
-      detect_result = tf.to_float(tf.equal(detector_preds, detec_max))
+      detect_result = tf.to_float(tf.equal(detector_preds, detect_max))
       y = tf.stop_gradient(y)
       detect_result = tf.stop_gradient(detect_result)
       targeted = False
